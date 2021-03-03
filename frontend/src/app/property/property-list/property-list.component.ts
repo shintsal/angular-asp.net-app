@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PropertyListComponent implements OnInit {
 
-  Property: Array<any> = [
+  properties: Array<any> = [
     {
     "Id":1,
     "Name": "Birla House",
@@ -17,20 +17,20 @@ export class PropertyListComponent implements OnInit {
     {
     "Id":2,
     "Name": "Erose Villa",
-    "Type": "House",
-    "Price": 12000
+    "Type": "Villa",
+    "Price": 14000
     },
     {
     "Id":3,
-    "Name": "Birla House",
-    "Type": "House",
-    "Price": 11400
+    "Name": "Mark Hill",
+    "Type": "Flat",
+    "Price": 12500
     },
     {
     "Id":4,
-    "Name": "Birla House",
-    "Type": "House",
-    "Price": 12000
+    "Name": "Gun Hill",
+    "Type": "Duplex",
+    "Price": 11400
     },
     {
     "Id":5,
@@ -43,7 +43,7 @@ export class PropertyListComponent implements OnInit {
     "Name": "Pearl White House",
     "Type": "House",
     "Price": 18000
-    },
+    }
 ]
 
   constructor() { }
