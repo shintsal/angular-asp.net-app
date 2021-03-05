@@ -6,7 +6,7 @@ import {
   Validators,
 } from '@angular/forms';
 import { Router } from '@angular/router';
-import { UserServiceService } from 'src/app/services/user-service.service';
+import { UserService } from 'src/app/services/user.service';
 import { User } from 'src/app/model/user';
 import { AlertifyService } from 'src/app/services/alertify.service';
 
@@ -23,7 +23,7 @@ export class UserRegisterComponent implements OnInit {
   constructor(
     private route: Router,
     private fb: FormBuilder,
-    private userService: UserServiceService,
+    private userService: UserService,
     private alertify: AlertifyService
   ) {}
 

@@ -4,7 +4,7 @@ import { User } from 'src/app/model/user';
 @Injectable({
   providedIn: 'root'
 })
-export class UserServiceService {
+export class UserService {
 
 constructor() { }
 
@@ -13,9 +13,11 @@ addUser(user: User) {
   if (localStorage.getItem('Users')) {
     users = JSON.parse(localStorage.getItem('Users'));
     users = [user, ...users];
+
   } else {
     users = [user];
   }
-  localStorage.setItem('Users', JSON.stringify(user));
+  console.log("users", users)
+  localStorage.setItem('Users', JSON.stringify(users));
 }
 }
