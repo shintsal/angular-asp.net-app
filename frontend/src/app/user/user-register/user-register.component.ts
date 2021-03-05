@@ -8,6 +8,7 @@ import {
 import { Router } from '@angular/router';
 import { UserServiceService } from 'src/app/services/user-service.service';
 import { User } from 'src/app/model/user';
+import { AlertifyService } from 'src/app/services/alertify.service';
 
 @Component({
   selector: 'app-user-register',
@@ -22,7 +23,8 @@ export class UserRegisterComponent implements OnInit {
   constructor(
     private route: Router,
     private fb: FormBuilder,
-    private userService: UserServiceService
+    private userService: UserServiceService,
+    private alertify: AlertifyService
   ) {}
 
   ngOnInit() {
@@ -86,6 +88,9 @@ export class UserRegisterComponent implements OnInit {
       this.userService.addUser(this.userData());
       this.registrationForm.reset();
       this.userSubmitted = false;
+      this.alertify.success('Congrats, you are succesfully registered')
+    } else {
+      this.alertify.error('Kindly provide the required fields')
     }
   }
 
