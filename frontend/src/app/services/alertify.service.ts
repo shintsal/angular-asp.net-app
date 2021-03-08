@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import * as alertify from 'alertifyjs';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 
 @Injectable({
   providedIn: 'root'
