@@ -41,8 +41,8 @@ const appRoutes: Routes = [
     NavBarComponent,
     AddPropertyComponent,
     PropertyDetailComponent,
-    UserLoginComponent,
-    UserRegisterComponent
+    UserRegisterComponent,
+    UserLoginComponent
    ],
   imports: [
     BrowserModule,
@@ -57,9 +57,11 @@ const appRoutes: Routes = [
     BsDatepickerModule.forRoot(),
     ButtonsModule.forRoot()
   ],
-  providers: [HousingService, UserService,
-  AlertifyService,
-  AuthService],
+  providers: [
+    HousingService,
+    UserService,
+    AlertifyService,
+    AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
